@@ -1,0 +1,4 @@
+patient_id,first_name,last_name,gender,birthdate
+1,John,Doe,M,1980-05-12
+2,Sarah,Smith,F,1992-11-03
+3,Michael,Brown,M,1975-02-20

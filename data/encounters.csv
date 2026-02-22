@@ -1,0 +1,4 @@
+encounter_id,patient_id,visit_date,department,diagnosis_code
+101,1,2024-01-10,Cardiology,I10
+102,1,2024-03-15,Primary Care,E11
+103,2,2024-02-01,Orthopedics,M54
