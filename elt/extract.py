@@ -10,11 +10,14 @@ DB_NAME = os.environ.get("DB_NAME")
 
 engine = create_engine(f"postgresql://postgres:{DB_PASSWORD}@localhost:5432/{DB_NAME}")
 
-df = pd.read_csv("data/patients.csv")
+# extract raw patients csv data into PostgreSQL tables
+df = pd.read_csv("data/raw/patients.csv")
 df.to_sql("patients", engine, if_exists="append", index=False)
 
-df = pd.read_csv("data/diagnoses.csv")
+# extract raw diagnoses csv data into PostgreSQL tables
+df = pd.read_csv("data/raw/diagnoses.csv")
 df.to_sql("diagnoses", engine, if_exists="append", index=False)
 
-df = pd.read_csv("data/encounters.csv")
+# extract raw encounters csv data into PostgreSQL tables
+df = pd.read_csv("data/raw/encounters.csv")
 df.to_sql("encounters", engine, if_exists="append", index=False)
